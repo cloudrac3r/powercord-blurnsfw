@@ -1,0 +1,41 @@
+.pc-chat.is-nsfw-channel .pc-imageWrapper {
+    position: relative;
+}
+
+
+.pc-chat.is-nsfw-channel .pc-imageWrapper img {
+    filter: blur(20px);
+    position: relative;
+}
+
+.pc-chat.is-nsfw-channel .pc-imageWrapper:hover img {
+    filter: none;
+}
+
+.pc-chat.is-nsfw-channel .pc-imageWrapper .nsfw-block {
+    content: "NSFW";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.pc-chat.is-nsfw-channel .pc-imageWrapper .nsfw-block::after {
+    content: "NSFW";
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #dcddde;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 20px;
+    letter-spacing: .5px;
+}
+
+.pc-chat.is-nsfw-channel .pc-imageWrapper:hover .nsfw-block {
+    display: none;
+}
