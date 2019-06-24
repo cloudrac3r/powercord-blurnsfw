@@ -1,6 +1,6 @@
 {
   "name": "Blur NSFW",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Blur images in NSFW channels until they are hovered.",
   "author": "Cadence#3263",
   "license": "AGPL-3.0"

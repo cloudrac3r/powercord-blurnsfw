@@ -45,13 +45,6 @@ module.exports = class BlurNSFW extends Plugin {
 			if (channel.nsfw) {
 				res.props.className += " is-nsfw-channel"
 			}
-			document.querySelectorAll(".pc-imageWrapper").forEach(embedImage => {
-				if (embedImage.lastChild && embedImage.lastChild.tagName != "DIV") {
-					let nsfwLabel = document.createElement("div")
-					nsfwLabel.classList.add("nsfw-block")
-					embedImage.appendChild(nsfwLabel)
-				}
-			})
 			return res
 		})
 	}

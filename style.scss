@@ -12,21 +12,12 @@
     filter: none;
 }
 
-.pc-chat.is-nsfw-channel .pc-imageWrapper .nsfw-block {
+.pc-chat.is-nsfw-channel .pc-imageWrapper::after {
     content: "NSFW";
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-}
-
-.pc-chat.is-nsfw-channel .pc-imageWrapper .nsfw-block::after {
-    content: "NSFW";
+    display: block;
+    left: 50%;
+    top: 50%;
     background-color: rgba(0, 0, 0, 0.6);
     color: #dcddde;
     font-size: 15px;
@@ -34,8 +25,9 @@
     padding: 8px 12px;
     border-radius: 20px;
     letter-spacing: .5px;
+    transform: translate(-50%, -50%);
 }
 
-.pc-chat.is-nsfw-channel .pc-imageWrapper:hover .nsfw-block {
+.pc-chat.is-nsfw-channel .pc-imageWrapper:hover::after {
     display: none;
 }
