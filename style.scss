@@ -1,18 +1,18 @@
-.pc-chat.is-nsfw-channel .pc-imageWrapper {
+.chat-3bRxxu.is-nsfw-channel .imageWrapper-2p5ogY {
     position: relative;
 }
 
 
-.pc-chat.is-nsfw-channel .pc-imageWrapper img {
+.chat-3bRxxu.is-nsfw-channel .imageWrapper-2p5ogY img {
     filter: blur(20px);
     position: relative;
 }
 
-.pc-chat.is-nsfw-channel .pc-imageWrapper:hover img {
+.chat-3bRxxu.is-nsfw-channel .imageWrapper-2p5ogY:hover img {
     filter: none;
 }
 
-.pc-chat.is-nsfw-channel .pc-imageWrapper::after {
+.chat-3bRxxu.is-nsfw-channel .imageWrapper-2p5ogY::after {
     content: "NSFW";
     position: absolute;
     display: block;
@@ -28,6 +28,6 @@
     transform: translate(-50%, -50%);
 }
 
-.pc-chat.is-nsfw-channel .pc-imageWrapper:hover::after {
+.chat-3bRxxu.is-nsfw-channel .imageWrapper-2p5ogY:hover::after {
     display: none;
 }

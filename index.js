@@ -26,7 +26,7 @@ module.exports = class BlurNSFW extends Plugin {
 		let _this = this;
 		const Channels = await getModuleByDisplayName("Channels")
 		inject("cadence-blurnsfw-channellist", Channels.prototype, "render", function(_, res) {
-			let chat = document.querySelector(".pc-chat")
+			let chat = document.querySelector(".chat-3bRxxu")
 			if (chat && !_this.patchedRenderer) {
 				_this._patchChannelRenderer(chat)
 				_this.patchedRenderer = true
