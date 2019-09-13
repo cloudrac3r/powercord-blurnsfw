@@ -3,12 +3,14 @@
 }
 
 
-.chat-3bRxxu.is-nsfw-channel .imageWrapper-2p5ogY img {
+.chat-3bRxxu.is-nsfw-channel .imageWrapper-2p5ogY img,
+.embedVideo-3nf0O9 video {
     filter: blur(20px);
     position: relative;
 }
 
-.chat-3bRxxu.is-nsfw-channel .imageWrapper-2p5ogY:hover img {
+.chat-3bRxxu.is-nsfw-channel .imageWrapper-2p5ogY:hover img,
+.embedVideo-3nf0O9:hover video {
     filter: none;
 }
 
