@@ -1,35 +1,58 @@
-.chat-3bRxxu.is-nsfw-channel .imageWrapper-2p5ogY {
+.chat-3bRxxu.nsfw {
+  .imageWrapper-2p5ogY {
     position: relative;
-}
 
+    &.embedWrapper-lXpS3L,
+    .wrapper-2TxpI8,
+    &.embedThumbnail-2Y84-K {
+      &:hover {
+        &::after {
+          display: none;
+        }
+      }
+    }
 
-.chat-3bRxxu.is-nsfw-channel .imageWrapper-2p5ogY img,
-.chat-3bRxxu.is-nsfw-channel .embedVideo-3nf0O9 video {
+    &.embedWrapper-lXpS3L,
+    .wrapper-2TxpI8.wrapperPaused-19pWuK,
+    &.embedThumbnail-2Y84-K {
+      &::after {
+        content: "NSFW";
+        position: absolute;
+        display: block;
+        left: 50%;
+        top: 50%;
+        background-color: rgba(0, 0, 0, 0.6);
+        color: #dcddde;
+        font-size: 15px;
+        font-weight: 600;
+        padding: 8px 12px;
+        border-radius: 20px;
+        letter-spacing: 0.5px;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  .wrapper-2TxpI8.wrapperPaused-19pWuK {
+    &:hover {
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  .imageWrapper-2p5ogY img,
+  .embedVideo-3nf0O9 video,
+  .video-8eMOth {
     filter: blur(20px);
     position: relative;
-}
 
-.chat-3bRxxu.is-nsfw-channel .imageWrapper-2p5ogY:hover img,
-.chat-3bRxxu.is-nsfw-channel .embedVideo-3nf0O9:hover video {
+    &:hover {
+      filter: none;
+    }
+  }
+
+  .wrapperControlsHidden-35Gtol video {
     filter: none;
-}
-
-.chat-3bRxxu.is-nsfw-channel .imageWrapper-2p5ogY::after {
-    content: "NSFW";
-    position: absolute;
-    display: block;
-    left: 50%;
-    top: 50%;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: #dcddde;
-    font-size: 15px;
-    font-weight: 600;
-    padding: 8px 12px;
-    border-radius: 20px;
-    letter-spacing: .5px;
-    transform: translate(-50%, -50%);
-}
-
-.chat-3bRxxu.is-nsfw-channel .imageWrapper-2p5ogY:hover::after {
-    display: none;
+  }
 }
