@@ -7,7 +7,7 @@ const { resolve } = require('path');
 
 module.exports = class BlurNSFW extends Plugin {
   async startPlugin() {
-    this.loadCSS(resolve(__dirname, 'style.scss'));
+    this.loadStylesheet(resolve(__dirname, 'style.scss'));
     this.getChannel = (await webpack.getModule(['getChannel'])).getChannel;
     this.patchedRenderer = false;
     this._patchChannelList();
