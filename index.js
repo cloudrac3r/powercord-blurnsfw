@@ -15,23 +15,14 @@ module.exports = class BlurNSFW extends Plugin {
 
   pluginWillUnload() {
     uninject('cadence-blurnsfw-channels');
-    uninject('cadence-blurnsfw-channellist');
   }
 
   async _patchChannelList() {
     const _this = this;
     const chatClass = (await webpack.getModule(['chat'], false)).chat;
     const ChannelItem = await getModuleByDisplayName('ChannelItem');
-
-    inject('cadence-blurnsfw-channellist', ChannelItem.prototype, 'render', (_, res) => {
-      const chat = document.querySelector(`.${chatClass}`);
-      if (chat && !_this.patchedRenderer) {
-        _this._patchChannelRenderer(chat);
-        _this.patchedRenderer = true;
-        uninject('cadence-blurnsfw-channellist');
-      }
-      return res;
-    });
+    const chat = document.querySelector(`.${chatClass}`);
+    _this._patchChannelRenderer(chat);
   }
 
   async _patchChannelRenderer(chat) {
